@@ -30,8 +30,8 @@ function App() {
   ];
 
   return (
-    <div className="categories-container m-8 inline-grid gap-7 grid-cols-3 grid-row-3">
-      {categories.map(({ id, title, url}) => (
+    <div className="categories-container m-8 flex flex-wrap gap-4">
+      {categories.map(({ id, title, url }) => (
         <CategoryContainer key={id} title={title} url={url} />
       ))}
     </div>

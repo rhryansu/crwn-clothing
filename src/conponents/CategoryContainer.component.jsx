@@ -2,13 +2,12 @@ import React from "react";
 
 function CategoryContainer(props) {
   return (
-    <div id={props.id}>
+    <div className="h-64 w-96 flex grow hover:opacity-80 ease-in-out duration-300 cursor-pointer">
       <div
-        className="w-96 h-64 grid place-items-center
-        text-center m-auto hover:opacity-80 ease-in-out duration-300 cursor-pointer"
+        className="w-full h-full bg-cover bg-center"
         style={{ backgroundImage: `url(${props.url})` }}
       >
-        <div>
+        <div className="flex w-full h-full items-center justify-center">
           <h2 className="font-semibold text-white text-4xl">{props.title}</h2>
         </div>
       </div>
