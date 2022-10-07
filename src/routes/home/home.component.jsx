@@ -1,4 +1,4 @@
-import CategoryContainer from "../../components/CategoryContainer.component";
+import CategoryContainer from "../../components/categoryContainer.component";
 import { Outlet } from "react-router-dom";
 
 function Home() {
