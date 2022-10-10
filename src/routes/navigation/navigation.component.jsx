@@ -23,7 +23,6 @@ function Navigation() {
             >
               Sign in
             </Link>
-            
           </div>
         </div>
         <Outlet />
