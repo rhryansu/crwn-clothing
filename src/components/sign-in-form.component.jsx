@@ -3,13 +3,13 @@ import {
   signInWithGoogle,
   signInWithGithub,
   createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.utils";
+  signInAuthUserWithEmailAndPassword,
+} from "../utils/firebase/firebase.utils";
 import { SocialIcon } from "react-social-icons";
-import SignUp from "../../components/sign-up.component";
-import { DebounceInput } from "react-debounce-input";
 import { useState } from "react";
+import FormInput from "./form-input/form-input.component";
 
-function SignIn() {
+function SignInForm() {
   const defaultFormFields = {
     email: "",
     password: "",
@@ -36,35 +36,59 @@ function SignIn() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    try {
+      const response = await signInAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+      console.log(response);
+    } catch (error) {
+      switch (error.code) {
+        case "auth/user-not-found":
+          console.log("User not found");
+          break;
+        case "auth/wrong-password":
+          console.log("Wrong password");
+          break;
+        default:
+          console.log(error);
+      }
+    }
   };
 
   return (
     <div className="flex justify-evenly">
       <div className="flex flex-col my-40 px-8 items-center">
         <div className="flex flex-col">
-          <p className="font-semibold text-blue-500">Sign In Here with Email and Password</p>
+          <p className="font-semibold text-blue-500">
+            Sign In Here with Email and Password
+          </p>
           <form onSubmit={handleSubmit} className="flex flex-col pt-5">
-            <label>Email</label>
-            <DebounceInput
+            <FormInput
+              label="Email"
               required
               type="email"
-              className="p-1 my-2 border rounded box-border px-2"
+              className="w-full p-1 my-2 border rounded box-border px-2"
               name="email"
               value={email}
               onChange={handleOnChange}
               debounceTimeout={500}
             />
-            <label>Password</label>
-            <DebounceInput
+            <FormInput
+              label="Password"
               required
               type="password"
-              className="p-1 my-2 border rounded box-border px-2"
+              className="w-full p-1 my-2 border rounded box-border px-2"
               name="password"
               value={password}
               onChange={handleOnChange}
               debounceTimeout={500}
             />
-            <button type="submit" className="inline-flex items-center justify-center w-full p-1 mt-5 text-white border rounded bg-blue-500 border-blue-500 hover:bg-white hover:text-blue-500 transition ease-in-out duration-500">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center w-full p-1 mt-5 text-white border rounded bg-blue-500 border-blue-500 hover:bg-white hover:text-blue-500 transition ease-in-out duration-500"
+            >
               Login
             </button>
           </form>
@@ -89,12 +113,8 @@ function SignIn() {
           Sign in with GitHub
         </button>
       </div>
-      <div className="border-l border-slate-400/50"></div>
-      <div className="flex">
-        <SignUp />
-      </div>
     </div>
   );
 }
 
-export default SignIn;
+export default SignInForm;

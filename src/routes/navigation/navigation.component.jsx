@@ -19,7 +19,7 @@ function Navigation() {
             </Link>
             <Link
               className="nav-link mx-2 font-semibold decoration-4 underline-offset-4 hover:underline decoration-red-500"
-              to="/sign-in"
+              to="/auth"
             >
               Sign in
             </Link>

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { DebounceInput } from "react-debounce-input";
 import { createAuthUserWithEmailAndPassword } from "../utils/firebase/firebase.utils";
 import { ReactComponent as Tick } from "../assets/icons8-done.svg";
+import FormInput from "./form-input/form-input.component";
 
-function SignUp() {
+function SignUpForm() {
   const defaultFormFields = {
     displayName: "",
     email: "",
@@ -69,8 +69,8 @@ function SignUp() {
         Sign Up Here with Email and Password
       </h1>
       <form className="mt-4 flex flex-col items-star pt-5" onSubmit={handleSubmit}>
-        <label>Display Name</label>
-        <DebounceInput
+        <FormInput
+          label='Display Name'
           required
           type="text"
           className="w-full p-1 my-2 border rounded box-border px-2"
@@ -79,9 +79,8 @@ function SignUp() {
           onChange={handleOnChange}
           debounceTimeout={500}
         />
-
-        <label>Email</label>
-        <DebounceInput
+        <FormInput
+          label='Email'
           required
           inputRef={emailRef}
           type="email"
@@ -91,9 +90,8 @@ function SignUp() {
           onChange={handleOnChange}
           debounceTimeout={500}
         />
-
-        <label>Password</label>
-        <DebounceInput
+        <FormInput
+          label='Password'
           required
           type="password"
           className="w-full p-1 my-2 border rounded box-border px-2"
@@ -104,9 +102,8 @@ function SignUp() {
           pattern=".{6,}"
           title="6 characters minimum"
         />
-
-        <label>Confirm Password</label>
-        <DebounceInput
+        <FormInput
+          label='Confirm Password'
           required
           inputRef={passwordRef}
           type="password"
@@ -152,4 +149,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignUpForm;
