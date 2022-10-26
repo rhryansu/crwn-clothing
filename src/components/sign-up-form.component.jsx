@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { createAuthUserWithEmailAndPassword } from "../utils/firebase/firebase.utils";
 import { ReactComponent as Tick } from "../assets/icons8-done.svg";
 import FormInput from "./form-input/form-input.component";
@@ -21,8 +21,6 @@ function SignUpForm() {
   const passwordRef = useRef();
   const [btnStatus, setBtnStatus] = useState("Sign up");
 
-  console.log(formFields);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -32,14 +30,14 @@ function SignUpForm() {
     } else {
       try {
         setBtnStatus("Processing...");
-        const response = await createAuthUserWithEmailAndPassword(
+        await createAuthUserWithEmailAndPassword(
           email,
           password
         );
+
         setBtnStatus("Success");
         await timeout(2000);
         resetFormFields();
-        console.log(response);
       } catch (error) {
         if (error.code === "auth/email-already-in-use") {
           setFormFields({ ...formFields, email: "" });
@@ -68,9 +66,12 @@ function SignUpForm() {
       <h1 className="font-semibold text-blue-500">
         Sign Up Here with Email and Password
       </h1>
-      <form className="mt-4 flex flex-col items-star pt-5" onSubmit={handleSubmit}>
+      <form
+        className="mt-4 flex flex-col items-star pt-5"
+        onSubmit={handleSubmit}
+      >
         <FormInput
-          label='Display Name'
+          label="Display Name"
           required
           type="text"
           className="w-full p-1 my-2 border rounded box-border px-2"
@@ -80,7 +81,7 @@ function SignUpForm() {
           debounceTimeout={500}
         />
         <FormInput
-          label='Email'
+          label="Email"
           required
           inputRef={emailRef}
           type="email"
@@ -91,7 +92,7 @@ function SignUpForm() {
           debounceTimeout={500}
         />
         <FormInput
-          label='Password'
+          label="Password"
           required
           type="password"
           className="w-full p-1 my-2 border rounded box-border px-2"
@@ -103,7 +104,7 @@ function SignUpForm() {
           title="6 characters minimum"
         />
         <FormInput
-          label='Confirm Password'
+          label="Confirm Password"
           required
           inputRef={passwordRef}
           type="password"

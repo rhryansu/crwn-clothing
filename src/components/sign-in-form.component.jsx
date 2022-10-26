@@ -2,7 +2,6 @@ import React from "react";
 import {
   signInWithGoogle,
   signInWithGithub,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../utils/firebase/firebase.utils";
 import { SocialIcon } from "react-social-icons";
@@ -20,13 +19,11 @@ function SignInForm() {
   const { email, password } = formFields;
 
   const logGoogleUser = async () => {
-    const response = await signInWithGoogle();
-    const userDocRef = await createUserDocumentFromAuth(response.user);
+    await signInWithGoogle();
   };
 
   const logGithubUser = async () => {
-    const response = await signInWithGithub();
-    const userDocRef = await createUserDocumentFromAuth(response.user);
+    await signInWithGithub();
   };
 
   const handleOnChange = (event) => {
@@ -38,11 +35,12 @@ function SignInForm() {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+
+        setFormFields(defaultFormFields);
     } catch (error) {
       switch (error.code) {
         case "auth/user-not-found":
