@@ -12,20 +12,51 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [cartItems, setCartItems] = useState([]);
-  
+
   const [cartItemsCount, setCartItemsCount] = useState(0);
 
   const addItemToCart = (productToAdd) => {
     setCartItems(addCartItem(cartItems, productToAdd));
   };
 
+  const removeItemFromCart = (productToRemove) => {
+    setCartItems(removeCartItem(cartItems, productToRemove));
+  };
+
+  const cleanItem = (productToClean) => {
+    setCartItems(cartItems.filter((item) => item.id !== productToClean.id));
+  };
+
   useEffect(() => {
     setCartItemsCount(cartItems.reduce((acc, item) => acc + item.quantity, 0));
   }, [cartItems]);
 
-  const value = { isVisible, setIsVisible, addItemToCart, cartItems, cartItemsCount };
+  const value = {
+    isVisible,
+    setIsVisible,
+    addItemToCart,
+    removeItemFromCart,
+    cartItems,
+    cartItemsCount,
+    cleanItem,
+  };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+};
+
+const removeCartItem = (cartItems, productToRemove) => {
+  const existingCartItem = cartItems.find(
+    (item) => item.id === productToRemove.id
+  );
+  if (existingCartItem.quantity > 1) {
+    return cartItems.map((item) =>
+      item.id === productToRemove.id
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    );
+  }
+
+  return cartItems.filter((item) => item.id !== productToRemove.id);
 };
 
 const addCartItem = (cartItems, productToAdd) => {
