@@ -4,8 +4,13 @@ import { CartContext } from "../../contexts/cart.context";
 import { useNavigate } from "react-router-dom";
 
 const CartDropdown = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, isVisible, setIsVisible } = useContext(CartContext);
   const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/checkout");
+    setIsVisible(!isVisible);
+  };
+
   return (
     <div className="absolute w-60 h-[340px] flex flex-col p-5 border border-black bg-white top-16 right-10 z-[5]">
       <div className="h-60 flex flex-col overflow-scroll">
@@ -14,7 +19,7 @@ const CartDropdown = () => {
         ))}
       </div>
       <button
-        onClick={() => navigate("/checkout")}
+        onClick={handleClick}
         className="mt-auto p-2 border border-white bg-black text-white hover:bg-white hover:text-black transition hover:border-black ease-in-out duration-300"
       >
         Go to Checkout
