@@ -11,25 +11,23 @@ const Checkout = () => {
   return (
     <div className="p-10">
       <h1 className="font-bold text-3xl">Checkout</h1>
-      <div className="flex flex-col gap-10 mt-10">
-        <div className="grid grid-cols-5 justify-items-center font-bold text-lg">
+      <div className="flex flex-col mt-10">
+        <div className="grid grid-cols-5 justify-items-center font-bold text-lg border-b-2 p-4">
           <h2>Product</h2>
           <h2>Description</h2>
           <h2>Quantity</h2>
           <h2>Price</h2>
           <h2>Remove</h2>
         </div>
-        <span className="h-1 w-full p-0.5 bg-black"></span>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col">
           {cartItems.map((item) => {
             return (
               <CheckoutItem key={item.id} item={item} otherProps={otherProps} />
             );
           })}
         </div>
-        <span className="h-1 w-full p-0.5 bg-black"></span>
       </div>
-      <div className="mt-10 font-black text-2xl float-right">
+      <div className="font-black text-2xl float-right pb-10 pr-4">
         Total: $
         {cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)}
       </div>

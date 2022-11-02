@@ -3,8 +3,10 @@ import React from "react";
 const CheckoutItem = ({ item, otherProps }) => {
 
   return (
-    <div className="grid grid-cols-5 justify-items-center place-items-center font-semibold">
-      <img className="w-[40%]" src={item.imageUrl} alt={`${item.name}`}></img>
+    <div className="grid grid-cols-5 justify-items-center place-items-center font-semibold border-b-2 p-4 h-40">
+      <div className="w-[23%]">
+        <img className="w-full h-full" src={item.imageUrl} alt={`${item.name}`}></img>
+      </div>
       <h2>{item.name}</h2>
       <div>
         <span
