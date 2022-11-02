@@ -6,7 +6,8 @@ export const CartContext = createContext({
   cartItems: [],
   addItemToCart: () => {},
   cartItemsCount: 0,
-  addItemsCount: () => {},
+  removeItemFromCart: () => {},
+  cleanItem: () => {},
 });
 
 export const CartProvider = ({ children }) => {
@@ -34,10 +35,10 @@ export const CartProvider = ({ children }) => {
   const value = {
     isVisible,
     setIsVisible,
-    addItemToCart,
-    removeItemFromCart,
     cartItems,
+    addItemToCart,
     cartItemsCount,
+    removeItemFromCart,
     cleanItem,
   };
 
