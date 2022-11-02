@@ -19,13 +19,20 @@ const Checkout = () => {
           <h2>Price</h2>
           <h2>Remove</h2>
         </div>
-        {cartItems.map((item) => {
-          return (
-            <CheckoutItem key={item.id} item={item} otherProps={otherProps} />
-          );
-        })}
+        <span className="h-1 w-full p-0.5 bg-black"></span>
+        <div className="flex flex-col gap-10">
+          {cartItems.map((item) => {
+            return (
+              <CheckoutItem key={item.id} item={item} otherProps={otherProps} />
+            );
+          })}
+        </div>
+        <span className="h-1 w-full p-0.5 bg-black"></span>
       </div>
-      <div className="mt-10 font-black text-2xl float-right">Total: ${cartItems.reduce((acc, item) => (acc + item.quantity * item.price), 0)}</div>
+      <div className="mt-10 font-black text-2xl float-right">
+        Total: $
+        {cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)}
+      </div>
     </div>
   );
 };
