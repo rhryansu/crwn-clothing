@@ -14,9 +14,11 @@
     "react-scripts": "5.0.1",
     "react-social-icons": "^5.15.0",
     "sass": "^1.55.0",
+    "source-map-explorer": "^2.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
