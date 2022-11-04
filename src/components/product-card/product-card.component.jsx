@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
         <span name="name" className="w-[90%] mb-[15px] font-serif">
           {name}
         </span>
-        <span name="price" className="w-[10%] font-serif">
+        <span name="price" className="font-serif">
           ${price}
         </span>
       </div>

@@ -14,9 +14,11 @@ const CartDropdown = () => {
   return (
     <div className="absolute w-60 h-[340px] flex flex-col p-5 border border-black bg-white top-16 right-10 z-[5]">
       <div className="h-60 flex flex-col overflow-scroll">
-        {cartItems.map((item) => (
-          <CartItem key={item.id} cartItem={item} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
+        ) : (
+          <span className="text-center text-lg m-auto">Your cart is empty</span>
+        )}
       </div>
       <button
         onClick={handleClick}
