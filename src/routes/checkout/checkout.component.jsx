@@ -3,7 +3,7 @@ import { CartContext } from "../../contexts/cart.context";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
 const Checkout = () => {
-  const { cartItems, addItemToCart, removeItemFromCart, cleanItem } =
+  const { cartItems, addItemToCart, removeItemFromCart, cleanItem, cartTotal } =
     useContext(CartContext);
 
   const otherProps = { addItemToCart, removeItemFromCart, cleanItem };
@@ -29,7 +29,7 @@ const Checkout = () => {
       </div>
       <div className="font-black text-2xl float-right pb-10 pr-4">
         Total: $
-        {cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)}
+        {cartTotal}
       </div>
     </div>
   );
