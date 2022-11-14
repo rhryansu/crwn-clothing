@@ -1,14 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
-import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import { CartContext } from "../../contexts/cart.context";
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 function Navigation() {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(selectCurrentUser);
   const { isVisible } = useContext(CartContext);
 
   return (
@@ -26,7 +27,10 @@ function Navigation() {
               Shop
             </Link>
             {currentUser ? (
-              <span onClick={signOutUser} className="flex items-center cursor-pointer mx-2 font-semibold decoration-4 underline-offset-4 hover:underline decoration-red-500">
+              <span
+                onClick={signOutUser}
+                className="flex items-center cursor-pointer mx-2 font-semibold decoration-4 underline-offset-4 hover:underline decoration-red-500"
+              >
                 Sign out
               </span>
             ) : (
