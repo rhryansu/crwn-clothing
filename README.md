@@ -1,70 +1,163 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a name="readme-top"></a>
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <svg width="50px" height="39px" viewBox="0 0 50 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Crwn Clothing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="WiP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-90.000000, -38.000000)">
+            <g id="Group" transform="translate(90.000000, 38.000000)">
+                <polygon id="Rectangle" fill="#808282" points="3 14 25 26.5 47 14 40.855176 39 9.08421785 39"></polygon>
+                <polygon id="Triangle" fill-opacity="0.262838724" fill="#101A1A" points="25 8 40 39 10 39"></polygon>
+                <circle id="Oval" fill="#5E6363" cx="2" cy="9" r="2"></circle>
+                <circle id="Oval" fill="#5E6363" cx="25" cy="2" r="2"></circle>
+                <circle id="Oval" fill="#5E6363" cx="48" cy="9" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
+  </a>
 
-In the project directory, you can run:
+  <h3 align="center">Crwn Clothing</h3>
 
-### `npm start`
+  <p align="center">
+    A Shopping web application built with React, Redux, Firebase, Stripe, GraphQL, and more!
+    <br />
+    <a href="https://github.com/rhryansu/crwn-clothing"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/rhryansu/crwn-clothing">View Demo</a>
+    ·
+    <a href="https://github.com/rhryansu/crwn-clothing/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/rhryansu/crwn-clothing/issues">Request Feature</a>
+  </p>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  </ol>
+</details>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a href="https://ibb.co/9TtYM9d"><img src="https://i.ibb.co/T8LhCBN/Screenshot-2022-11-20-at-7-19-56-pm.png" alt="Screenshot-2022-11-20-at-7-19-56-pm">
 
-### `npm run eject`
+<p align="right"><a href="#readme-top">back to top</a></p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Built With
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
+![GraphQL](https://img.shields.io/badge/Apollo%20GraphQL-311C87?&style=for-the-badge&logo=Apollo%20GraphQL&logoColor=white)
 
-## Learn More
+<p align="right"><a href="#readme-top">back to top</a></p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<!-- GETTING STARTED -->
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install package manager [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/rhryansu/crwn-clothing.git
+   ```
+3. Install Yarn packages
+   ```sh
+   yarn install
+   ```
 
-### Advanced Configuration
+<p align="right"><a href="#readme-top">back to top</a></p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- USAGE EXAMPLES -->
+## Usage
 
-### `npm run build` fails to minify
+For learning purposes only.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Original React App Development
+- [x] Add React Router
+- [ ] Migration to Redux
+- [ ] Add Redux-Thunk
+- [ ] Add Redux-Saga
+- [ ] Serverless Functions with Stripe
+- [ ] TypeScript Migration
+    - [ ] Redux TypeScript Migration
+    - [ ] React TypeScript Migration
+    - [ ] Firebase TypeScript Migration
+    - [ ] Middleware TypeScript Migration
+    - [ ] Redux-Saga TypeScript Migration
+    - [ ] React Components TypeScript Migration
+- [ ] Add GraphQL and Apollo Client
+- [ ] Performance Optimisations
+- [ ] Mobile Optimisations
+- [ ] Testing
+
+
+See the [open issues](https://github.com/rhryansu/crwn-clothing/issues) for a full list of proposed features (and known issues).
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+<!-- CONTACT -->
+## Contact
+
+Ryan Su - me@rhryansu.com
+
+Project Link: [Crwn-Clothing](https://github.com/rhryansu/crwn-clothing)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
