@@ -3,8 +3,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-
-
+<p align="center"><img align="center" src='https://svgshare.com/i/oE5.svg' title='crown' /></p>
   <h3 align="center">Crwn Clothing</h3>
 
   <p align="center">
@@ -52,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<a href="https://ibb.co/9TtYM9d"><img src="https://i.ibb.co/T8LhCBN/Screenshot-2022-11-20-at-7-19-56-pm.png" alt="Screenshot-2022-11-20-at-7-19-56-pm">
+<p align="center"><img src="https://i.ibb.co/T8LhCBN/Screenshot-2022-11-20-at-7-19-56-pm.png" alt="Screenshot-2022-11-20-at-7-19-56-pm"></p>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
