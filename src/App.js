@@ -21,7 +21,7 @@ function App() {
     });
 
     return unsubscibe;
-  }, []);
+  });
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
