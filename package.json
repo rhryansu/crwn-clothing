@@ -16,6 +16,7 @@
     "react-social-icons": "^5.15.0",
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
+    "reselect": "^4.1.7",
     "sass": "^1.55.0",
     "source-map-explorer": "^2.5.3",
     "web-vitals": "^2.1.4"
