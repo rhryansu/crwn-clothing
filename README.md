@@ -90,17 +90,6 @@ Install package manager [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-For learning purposes only.
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -124,16 +113,6 @@ For learning purposes only.
 
 
 See the [open issues](https://github.com/rhryansu/crwn-clothing/issues) for a full list of proposed features (and known issues).
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-
-<!-- CONTACT -->
-## Contact
-
-Ryan Su - me@rhryansu.com
-
-Project Link: [Crwn-Clothing](https://github.com/rhryansu/crwn-clothing)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
